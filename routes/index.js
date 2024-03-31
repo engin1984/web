@@ -3,17 +3,17 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'HOME e-ng.in' });
+  res.render('index', { title: 'learn-chess.org - HOME' });
 });
 
-/* GET about page. */
-router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'ABOUT e-ng.in' });
+/* GET settings page. */
+router.get('/settings', function(req, res, next) {
+  res.render('settings', { title: 'settings - learn-chess.org' });
 });
 
-/* GET docs page. */
-router.get('/docs', function(req, res, next) {
-  res.render('docs', { title: 'DOCS e-ng.in' });
+/* GET help page. */
+router.get('/help', function(req, res, next) {
+  res.render('help', { title: 'Help? - learn-chess.org' });
 });
 
 

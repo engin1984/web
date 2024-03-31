@@ -7124,7 +7124,7 @@ button.dropdown-item.is-selected {
   --bulma-navbar-h: var(--bulma-scheme-h);
   --bulma-navbar-s: var(--bulma-scheme-s);
   --bulma-navbar-l: var(--bulma-scheme-main-l);
-  --bulma-navbar-background-color: #f0fff0;
+  --bulma-navbar-background-color: #5F9EA0;
   --bulma-navbar-box-shadow-size: 0 0.125em 0 0;
   --bulma-navbar-box-shadow-color: var(--bulma-background);
   --bulma-navbar-padding-vertical: 1rem;
