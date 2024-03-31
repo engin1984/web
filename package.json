@@ -1,0 +1,27 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pm2": "pm2 start -f node ./bin/www",
+    "build-bulma": "sass --load-path=node_modules public/stylesheets/main.scss public/stylesheets/main.css",
+    "all": "npm-run-all --parallel pm2 build-bulma -- --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "latest",
+    "cookie-parser": "latest",
+    "debug": "latest",
+    "dotenv": "latest",
+    "ejs": "latest",
+    "express": "latest",
+    "http-errors": "latest",
+    "morgan": "latest",
+    "npm-run-all": "latest",
+    "pm2": "latest",
+    "sass": "latest"
+  }
+}

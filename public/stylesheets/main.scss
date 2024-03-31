@@ -1,0 +1,26 @@
+// Set your brand colors
+$purple: #8a4d76;
+$pink: #fa7c91;
+$brown: #757763;
+$beige-light: #d0d1cd;
+$beige-lighter: #eff0eb;
+$honeydew: #f0fff0;
+
+
+// Path to Bulma's sass folder
+@use "bulma/sass" with (
+  $family-primary: '"Jost", sans-serif;',
+  $grey-dark: $brown,
+  $grey-light: $beige-light,
+  $primary: $purple,
+  $link: $pink,
+  $input-shadow: none,
+  $control-border-width: 2px,
+  $footer-padding: 1rem,
+  $navbar-background-color:$honeydew,
+);
+
+// Import the Google Font
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap')
+
+
