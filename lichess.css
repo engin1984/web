@@ -1,0 +1,40 @@
+/* ==UserStyle==
+@name        lichessorg
+@match       *://*.lichess.org/*
+==/UserStyle== */
+
+:root {--sharechess-board-url:url(https://raw.githubusercontent.com/chess-files/repo/main/backgrounds/olive4.jpeg); 
+    --sharechess-rw-url:url("https://images.chesscomfiles.com/chess-themes/pieces/neo_wood/300/wr.png"); 
+    --sharechess-nw-url:url("https://images.chesscomfiles.com/chess-themes/pieces/neo_wood/300/wn.png"); 
+    --sharechess-bw-url:url("https://images.chesscomfiles.com/chess-themes/pieces/neo_wood/300/wb.png"); 
+    --sharechess-qw-url:url("https://images.chesscomfiles.com/chess-themes/pieces/neo_wood/300/wq.png"); 
+    --sharechess-kw-url:url("https://images.chesscomfiles.com/chess-themes/pieces/neo_wood/300/wk.png"); 
+    --sharechess-pw-url:url("https://images.chesscomfiles.com/chess-themes/pieces/neo_wood/300/wp.png"); 
+    --sharechess-rb-url:url("https://images.chesscomfiles.com/chess-themes/pieces/neo_wood/300/br.png"); 
+    --sharechess-nb-url:url("https://images.chesscomfiles.com/chess-themes/pieces/neo_wood/300/bn.png"); 
+    --sharechess-bb-url:url("https://images.chesscomfiles.com/chess-themes/pieces/neo_wood/300/bb.png"); 
+    --sharechess-qb-url:url("https://images.chesscomfiles.com/chess-themes/pieces/neo_wood/300/bq.png"); 
+    --sharechess-kb-url:url("https://images.chesscomfiles.com/chess-themes/pieces/neo_wood/300/bk.png"); 
+    --sharechess-pb-url:url("https://images.chesscomfiles.com/chess-themes/pieces/neo_wood/300/bp.png");}
+
+.is2d cg-board {background-image:var(--sharechess-board-url) !important; background-size:cover;}
+.is2d cg-board::before {background-image:none !important;}
+.is2d coords {---cg-ccw:#00000099 !important; ---cg-ccb:#0000007f !important;}
+square.last-move {background-color:#ff000036 !important;}
+.is2d .bishop.black {background-image:var(--sharechess-bb-url) !important;}
+.is2d .bishop.white {background-image:var(--sharechess-bw-url) !important;}
+.is2d .king.black {background-image:var(--sharechess-kb-url) !important;}
+.is2d .king.white {background-image:var(--sharechess-kw-url) !important;}
+.is2d .knight.black {background-image:var(--sharechess-nb-url) !important;}
+.is2d .knight.white {background-image:var(--sharechess-nw-url) !important;}
+.is2d .pawn.black {background-image:var(--sharechess-pb-url) !important;}
+.is2d .pawn.white {background-image:var(--sharechess-pw-url) !important;}
+.is2d .queen.black {background-image:var(--sharechess-qb-url) !important;}
+.is2d .queen.white {background-image:var(--sharechess-qw-url) !important;}
+.is2d .rook.black {background-image:var(--sharechess-rb-url) !important;}
+.is2d .rook.white {background-image:var(--sharechess-rw-url) !important;}
+body.dark {background:#302e2b !important;}
+.analyse__tools {box-shadow:0 0 1px rgba(0, 0, 0, 1) inset;}
+.eval-gauge {background:#fff; border-radius:0px 0px 0px 0px; margin-left:1px; margin-right:1px; overflow:hidden; position:relative; width:var(--gauge-width);}
+.eval-gauge::after {border-radius:0px 0px 0px 0px; bottom:0; box-shadow:0 0 0px rgba(0, 0, 0, 0) inset; box-shadow:0 0 1px rgba(0, 0, 0, 1) inset; content:""; display:block; left:0; position:absolute; right:0; top:0;}
+.site-title, .site-title-nav__donate {display:none;}
