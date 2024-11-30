@@ -20,5 +20,12 @@ $beige-lighter: #eff0eb;
 // Import the Google Font
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
-
+.chessground {
+  width: 656px;
+  height: 656px;
+  }
+  
+  cg-board {
+  background-color: #bfcfdd;
+  }
 
