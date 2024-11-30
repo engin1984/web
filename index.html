@@ -6,10 +6,35 @@
 <title>Hello Bulma! & Vite</title>
 <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 <script src="https://kit.fontawesome.com/5a2a5f3f4a.js" crossorigin="anonymous"></script>
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="./node_modules/chessground/assets/chessground.base.css" />
+    <link rel="stylesheet" type="text/css" href="./node_modules/chessground/assets/chessground.brown.css" />
+    <link rel="stylesheet" type="text/css" href="./node_modules/chessground/assets/chessground.cburnett.css" />
+    <style>
+      
+
+      
+
+      .chessground {
+        width: 656px;
+        height: 656px;
+      }
+
+      cg-board {
+        background-color: #bfcfdd;
+      }
+    </style>
+
+
 </head>
 
 <body>
-<div class="container p-4 is-max-widescreen has-background-info-light">
+<div class="container is-max-widescreen has-background-info-light">
 <nav class="navbar" role="navigation" aria-label="main navigation">
 <div class="navbar-brand">
 <a class="navbar-item" href="/"><figure class="image is-24x24"><img class="is-rounded" src="img/e.jpg" /></figure></a>
@@ -45,11 +70,45 @@
 </div>
 </nav>
 
-<div class="container py-4 px-3">
+<div class="container p-4 ">
 <div class="columns">
 <div class="column is-three-quarters has-background-warning-light">
 
+   
 
+    
+
+
+    <div>
+        basic board, default config
+        <div class="chessground" id="board-1"></div>
+      </div>
+      <div>
+        board with a fen
+        <div class="chessground" id="board-2"></div>
+      </div>
+      <div>
+        board with fixed arrows + labels
+        <div class="chessground" id="board-3"></div>
+      </div>
+      <div>
+        board with coordinates on-square, ranks position left
+        <div class="chessground" id="board-4"></div>
+      </div>
+      <div>
+        board with coordinates on-square
+        <div class="chessground" id="board-5"></div>
+      </div>
+
+
+
+
+
+
+
+
+
+        
 
     <h1 class="title">Bulma</h1>
     <p class="subtitle">Modern CSS framework based on
