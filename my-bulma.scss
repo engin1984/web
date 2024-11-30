@@ -1,0 +1,23 @@
+// Set your brand colors
+$tomato: #ff6347;
+$navy: #000080;
+$brown: #757763;
+$beige-light: #d0d1cd;
+$beige-lighter: #eff0eb;
+
+// Path to Bulma's sass folder
+@use "bulma/sass" with (
+  $family-primary: '"Jost", sans-serif',
+  $grey-dark: $brown,
+  $grey-light: $beige-light,
+  $primary: $tomato,
+  $link: $navy,
+  $control-border-width: 2px,
+  $input-shadow: none
+);
+
+// Import the Google Font
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+

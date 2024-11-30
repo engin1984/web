@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hello Bulma! & Vite</title>
+<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+<script src="https://kit.fontawesome.com/5a2a5f3f4a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div class="container p-4 is-max-widescreen has-background-info-light">
+<nav class="navbar" role="navigation" aria-label="main navigation">
+<div class="navbar-brand">
+<a class="navbar-item" href="/"><img style="border-radius: 50%;" src="img/e.jpg" height="28"></a>
+<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+<span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
+</a>
+</div>
+
+<div id="navbarBasicExample" class="navbar-menu">
+<div class="navbar-start">
+<a class="navbar-item">Home</a>
+<a class="navbar-item">Documentation</a>
+</div>
+
+<div class="navbar-end">
+<div class="navbar-item">
+<div class="buttons">
+<a href="/play" class="button is-white"><span class="icon"><i class="fa-solid fa-chess-queen"></i></span><span>Play w/bots</span></a>
+<a href="/lessons" class="button is-white"><span class="icon"><i class="fa-solid fa-graduation-cap"></i></span><span>Lessons</span></a>
+<a href="/puzzles" class="button is-white"><span class="icon"><i class="fa-solid fa-puzzle-piece"></i></span><span>Puzzles</span></a>
+<a class="button is-white js-modal-trigger button" data-target="modal-js-example"><span class="icon"><i class="fa-solid fa-sliders"></i></span><span>Settings</span></a>
+</div>
+</div>
+</div>
+</div>
+</nav>
+
+<div class="container py-4 px-3">
+<div class="columns">
+<div class="column is-three-quarters has-background-warning-light">
+<h1 class="title">Hello World</h1>
+<p class="subtitle">My first website with <strong>Bulma</strong>!</p>
+
+<div id="app"></div>
+</div>
+<div class="column has-background-success-light">Auto</div>
+</div>
+</div>
+
+<h1 class="title">Bulma</h1>
+<p class="subtitle">Modern CSS framework based on
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a>
+</p>
+<div class="field">
+<div class="control">
+<input class="input" type="text" placeholder="Input">
+</div>
+</div>
+
+<div class="field">
+<p class="control">
+<span class="select">
+<select>
+<option>Select dropdown</option>
+</select>
+</span>
+</p>
+</div>
+<div class="buttons">
+<a class="button is-primary">Primary</a>
+<a class="button is-link">Link</a>
+</div>
+
+<footer class="footer">
+<div class="content has-text-centered">
+<p>
+<strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed <a href="https://opensource.org/license/mit">MIT</a>. The website content is licensed
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0//">CC BY NC SA 4.0</a>.
+</p>
+</div>
+</footer>
+</div>
+
+<!-- modaljs -->
+<div id="modal-js-example" class="modal">
+<div class="modal-background"></div>
+
+<div class="modal-content">
+<div class="box p-1">
+<!-- Your content -->
+<article class="message is-primary">
+<div class="message-header">
+<p>SETTINGS</p>
+<button class="delete" aria-label="delete"></button>
+</div>
+<div class="message-body">
+<div class="field">
+<label class="label">Name</label>
+<div class="control">
+<input class="input" type="text" placeholder="Text input">
+</div>
+</div>
+
+<div class="field">
+<label class="label">Name</label>
+<div class="control">
+<input class="input" type="text" placeholder="Text input">
+</div>
+</div>
+
+<div class="field">
+<label class="label">Name</label>
+<div class="control">
+<input class="input" type="text" placeholder="Text input">
+</div>
+</div>
+
+<div class="field">
+<label class="label">Name</label>
+<div class="control">
+<input class="input" type="text" placeholder="Text input">
+</div>
+</div>
+
+<label class="label">Name</label>
+
+<div class="field">
+<input id="switchRoundedSuccess1" type="checkbox" name="switchRoundedSuccess1" class="switch is-rounded is-success" checked="checked">
+<label for="switchRoundedSuccess1">Switch rounded success</label>
+</div>
+
+<div class="field">
+<input id="switchRoundedSuccess2" type="checkbox" name="switchRoundedSuccess2" class="switch is-rounded is-success" checked="checked">
+<label for="switchRoundedSuccess2">Switch rounded success</label>
+</div>
+
+<div class="field">
+<input id="switchRoundedSuccess3" type="checkbox" name="switchRoundedSuccess3" class="switch is-rounded is-success" checked="checked">
+<label for="switchRoundedSuccess3">Switch rounded success</label>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- <button class="modal-close is-large" aria-label="close"></button> -->
+</div>
+<!-- modaljs -->
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
