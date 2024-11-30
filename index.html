@@ -12,8 +12,11 @@
 <div class="container p-4 is-max-widescreen has-background-info-light">
 <nav class="navbar" role="navigation" aria-label="main navigation">
 <div class="navbar-brand">
-<a class="navbar-item" href="/"><img style="border-radius: 50%;" src="img/e.jpg" height="28"></a>
+<a class="navbar-item" href="/"><figure class="image is-24x24"><img class="is-rounded" src="img/e.jpg" /></figure></a>
+<!-- <a class="navbar-item" href="/"><img style="border-radius: 50%;" src="img/e.jpg" height="28"></a> -->
+
 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+<span aria-hidden="true"></span>
 <span aria-hidden="true"></span>
 <span aria-hidden="true"></span>
 <span aria-hidden="true"></span>
@@ -22,17 +25,20 @@
 
 <div id="navbarBasicExample" class="navbar-menu">
 <div class="navbar-start">
-<a class="navbar-item">Home</a>
 <a class="navbar-item">Documentation</a>
 </div>
 
 <div class="navbar-end">
 <div class="navbar-item">
 <div class="buttons">
-<a href="/play" class="button is-white"><span class="icon"><i class="fa-solid fa-chess-queen"></i></span><span>Play w/bots</span></a>
-<a href="/lessons" class="button is-white"><span class="icon"><i class="fa-solid fa-graduation-cap"></i></span><span>Lessons</span></a>
-<a href="/puzzles" class="button is-white"><span class="icon"><i class="fa-solid fa-puzzle-piece"></i></span><span>Puzzles</span></a>
-<a class="button is-white js-modal-trigger button" data-target="modal-js-example"><span class="icon"><i class="fa-solid fa-sliders"></i></span><span>Settings</span></a>
+<a href="/play" class="button is-small is-light"><span class="icon"><i class="fa-solid fa-chess-queen"></i></span><span>Play w/bots</span></a>
+<a href="/lessons" class="button is-small is-light"><span class="icon"><i class="fa-solid fa-graduation-cap"></i></span><span>Lessons</span></a>
+<a href="/puzzles" class="button is-small is-light"><span class="icon"><i class="fa-solid fa-puzzle-piece"></i></span><span>Puzzles</span></a>
+<a class="button is-small is-light js-modal-trigger button" data-target="modal-js-example"><span class="icon"><i class="fa-solid fa-sliders"></i></span><span>Settings</span></a>
+<a href="/user" class="button is-small is-light"><span class="icon"><i class="fa-solid fa-circle-user"></i></span><span>login/register</span></a>
+
+
+
 </div>
 </div>
 </div>
@@ -42,7 +48,41 @@
 <div class="container py-4 px-3">
 <div class="columns">
 <div class="column is-three-quarters has-background-warning-light">
-<h1 class="title">Hello World</h1>
+
+
+
+    <h1 class="title">Bulma</h1>
+    <p class="subtitle">Modern CSS framework based on
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a>
+    </p>
+    <div class="field">
+    <div class="control">
+    <input class="input" type="text" placeholder="Input">
+    </div>
+    </div>
+    
+    <div class="field">
+    <p class="control">
+    <span class="select">
+    <select>
+    <option>Select dropdown</option>
+    <option>Select 1</option>
+    <option>Select 2</option>
+    <option>Select 3</option>
+    
+    </select>
+    </span>
+    </p>
+    </div>
+    <div class="buttons">
+    <a class="button is-primary">Primary</a>
+    <a class="button is-link">Link</a>
+    </div>
+
+
+
+
+<h2 class="title">Hello World</h1>
 <p class="subtitle">My first website with <strong>Bulma</strong>!</p>
 
 <div id="app"></div>
@@ -51,29 +91,7 @@
 </div>
 </div>
 
-<h1 class="title">Bulma</h1>
-<p class="subtitle">Modern CSS framework based on
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a>
-</p>
-<div class="field">
-<div class="control">
-<input class="input" type="text" placeholder="Input">
-</div>
-</div>
 
-<div class="field">
-<p class="control">
-<span class="select">
-<select>
-<option>Select dropdown</option>
-</select>
-</span>
-</p>
-</div>
-<div class="buttons">
-<a class="button is-primary">Primary</a>
-<a class="button is-link">Link</a>
-</div>
 
 <footer class="footer">
 <div class="content has-text-centered">
