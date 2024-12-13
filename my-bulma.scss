@@ -7,7 +7,7 @@ $beige-lighter: #eff0eb;
 
 // Path to Bulma's sass folder
 @use "bulma/sass" with (
-  $family-primary: '"Jost", sans-serif',
+  $family-primary: '"Open Sans", sans-serif',
   $grey-dark: $brown,
   $grey-light: $beige-light,
   $primary: $tomato,
@@ -18,7 +18,7 @@ $beige-lighter: #eff0eb;
 );
 
 // Import the Google Font
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 .chessground {
   width: 656px;
@@ -28,4 +28,3 @@ $beige-lighter: #eff0eb;
   cg-board {
   background-color: #bfcfdd;
   }
-
