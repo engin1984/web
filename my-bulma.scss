@@ -1,0 +1,42 @@
+// Set your brand colors
+$RebeccaPurple: #663399;
+$navy: #000080;
+$oldLace: #FDF5E6;
+$AliceBlue: #F0F8FF;
+
+// Path to Bulma's sass folder
+@use "bulma/sass" with (
+  $family-primary: '"Montserrat", sans-serif',
+  $primary: $RebeccaPurple,
+  $link: $navy,
+  $control-border-width: 2px,
+  $input-shadow: none,
+  $footer-padding: 1rem,
+  //$body-background-color: $oldLace,
+  $navbar-background-color: $AliceBlue,
+);
+
+// Import the Google Font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+// ######################### others
+
+.column {
+  border: 12px inset rgb(255, 0, 0);
+}
+
+// ######################### others
+
+.chessboard {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  aspect-ratio: 1 / 1;
+  max-width: 100vmin; /* vmin = smaller of viewport width or height */
+  border: 1px solid #333;
+}
+
+// ######################### others
+
+// ######################### others
+
+// ######################### others
