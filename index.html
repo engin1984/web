@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="icon" href="%VITE_FAVICON_URL%" type="image/x-icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chess Puzzle Website</title>
+
+<!-- https://jqueryui.com/resizable/#aspect-ratio -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+<style>
+#resizable { min-width: 400px; min-height: 400px; max-width: 720px; max-height: 720px; width: 640px; height: 640px; padding: 0.5em; }
+</style>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+<script>
+$( function() {
+$( "#resizable" ).resizable({aspectRatio: 1 / 1});
+} );
+</script>
+<!-- https://jqueryui.com/resizable/#aspect-ratio -->
+
+</head>
+<body class="p-4 m-4"><!-- p-4 m-4 for easy development, remove in the future -->
+
+<nav class="navbar mb-4" role="navigation" aria-label="main navigation">
+<div class="navbar-brand">
+<a href="/" class="button is-text"><span class="icon"><i class="fa-solid fa-chess-queen"></i></span><span>learn-chess.org</span></a>
+<!-- <a class="navbar-item" href="/"><figure class="image is-28x28"><img alt="img" class="is-rounded" src="img/e.jpg" witdh="28" height="28" /></figure></a>
+<a class="navbar-item"><i class="fa-solid fa-house"></i> Home</a>
+<a class="navbar-item" href="/"><img alt="img" style="border-radius: 50%;" src="img/e.jpg" witdh="28" height="28"></a> -->
+<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+<span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
+</a>
+</div>
+<div id="navbarBasicExample" class="navbar-menu">
+<div class="navbar-end">
+<div class="navbar-item">
+<div class="buttons">
+<a href="#" class="button is-white"><span class="icon"><i class="fa-solid fa-graduation-cap"></i></span><span>Lessons</span></a>
+<a href="#" class="button is-white"><span class="icon"><i class="fa-solid fa-puzzle-piece"></i></span><span>Puzzles</span></a>
+<a href="#" class="button is-white"><span class="icon"><i class="fa-solid fa-sliders"></i></span><span>Settings</span></a>
+<a class="button is-white js-modal-trigger" data-target="modal-js-example"><span class="icon"><i class="fa-solid fa-circle-user"></i></span><span>login</span></a>
+</div>
+</div>
+</div>
+</div>
+</nav>
+
+<div class="notification is-info is-light">
+<button class="delete"></button><p> dissmissable cookie based site notification div...</p>
+</div>
+<div class="columns is-multiline is-mobile">
+<div class="column">
+<!-- board -->
+<div id="resizable" class="chessboard ui-widget-content">
+8x8 chess board
+</div>
+<!-- board -->
+</div>
+
+<div class="column is-one-quarter">
+<!-- right menu -->
+<nav class="pagination" role="navigation" aria-label="pagination">
+<a href="#" class="pagination-previous">previous puzzle</a>
+<a href="#" class="pagination-next">next puzzle</a>
+<ul class="pagination-list">
+<li>
+<a href="#" class="pagination-link" aria-label="Goto page 1">1</a>
+</li>
+<li>
+<span class="pagination-ellipsis">&hellip;</span>
+</li>
+<li>
+<a href="#" class="pagination-link" aria-label="Goto page 45">45</a>
+</li>
+<li>
+<a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a>
+</li>
+<li>
+<a href="#" class="pagination-link" aria-label="Goto page 47">47</a>
+</li>
+<li>
+<span class="pagination-ellipsis">&hellip;</span>
+</li>
+<li>
+<a href="#" class="pagination-link" aria-label="Goto page 86">86</a>
+</li>
+</ul>
+</nav>
+<!-- right menu -->
+</div>
+</div>
+
+<footer class="footer">
+<div class="content has-text-centered">footer is not crucial, maybe can be removed in the future
+</div>
+</footer>
+
+<!-- modaljs -->
+<div id="modal-js-example" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+  <div class="box p-1">
+  <!-- Your content -->
+  <article class="message is-primary">
+  <div class="message-header">
+  <p>passwordless login</p>
+  <button class="delete" aria-label="delete"></button>
+  </div>
+  <div class="message-body">
+  <div class="field">
+  <label class="label">email</label>
+  <div class="control">
+  <input class="input" type="text" placeholder="enter your email">
+  </div>
+  </div>
+  <div class="buttons">
+  <a class="button is-primary">send login link</a>
+  </div>
+  </div>
+  </article>
+  </div>
+  </div>
+  <!-- <button class="modal-close is-large" aria-label="close"></button> -->
+  </div>
+<!-- modaljs -->
+<script src="https://kit.fontawesome.com/5a2a5f3f4a.js" crossorigin="anonymous"></script>
+<script type="module" src="my-main.js"></script>
+
+</body>
+</html>
