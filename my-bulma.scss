@@ -35,6 +35,20 @@ $navbar-background-color: $AliceBlue,
   border: 1px solid #333;
 }
 
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(6vmin);
+}
+
+.light {
+  background-color: #f0d9b5;
+}
+
+.dark {
+  background-color: #b58863;
+}
 // ######################### others
 
 // ######################### others
