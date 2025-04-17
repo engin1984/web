@@ -3,17 +3,18 @@ $RebeccaPurple: #663399;
 $navy: #000080;
 $oldLace: #FDF5E6;
 $AliceBlue: #F0F8FF;
+$DropboxDash: #FAF9F7;
 
 // Path to Bulma's sass folder
 @use "bulma/sass" with (
-$family-primary: "Varela Round", sans-serif,
+$family-primary: '"Varela Round", sans-serif',
 $primary: $RebeccaPurple,
 $link: $navy,
 $control-border-width: 2px,
 $input-shadow: none,
 $footer-padding: 1rem,
-//$body-background-color: $oldLace,
-$navbar-background-color: $AliceBlue,
+$body-background-color: $DropboxDash,
+$navbar-background-color: $DropboxDash,
 );
 
 // Import the Google Font
