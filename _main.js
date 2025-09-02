@@ -1,6 +1,5 @@
 // bulma navbar, dark mode, dismissable message, klavye kısayolları ,modal, vite counter, 
 
-
 // ########## 
 import "./_main.scss"
 
