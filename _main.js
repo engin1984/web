@@ -1,7 +1,30 @@
-// bulma navbar, dark mode, dismissable message, klavye kısayolları ,modal, vite counter, 
-
 // ########## 
 import "./_main.scss"
+
+// ############ dark mode (ChatGPT)
+const darkToggleBtn = document.getElementById('toggle-dark');
+
+function applyTheme(dark) {
+  document.body.classList.toggle('dark', dark);
+  localStorage.setItem('darkmode', dark ? '1' : '0');
+}
+
+if (localStorage.getItem('darkmode') === '1') {
+  applyTheme(true);
+}
+
+darkToggleBtn?.addEventListener('click', () => {
+  const isDark = document.body.classList.contains('dark');
+  applyTheme(!isDark);
+});
+
+// ############ klavye kısayolları
+// H: Home, L: Login
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'h') window.location.href = '/';
+  if (e.key === 'l') window.location.href = '/login.html';
+});
 
 // ########## https://bulma.io/documentation/components/navbar/
 document.addEventListener('DOMContentLoaded', () => {
@@ -25,25 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
   });
-
-// ############ dark mode (ChatGPT)
-const darkToggleBtn = document.getElementById('toggle-dark');
-
-function applyTheme(dark) {
-  document.body.classList.toggle('dark', dark);
-  localStorage.setItem('darkmode', dark ? '1' : '0');
-}
-
-if (localStorage.getItem('darkmode') === '1') {
-  applyTheme(true);
-}
-
-darkToggleBtn?.addEventListener('click', () => {
-  const isDark = document.body.classList.contains('dark');
-  applyTheme(!isDark);
-});
-
-
 
 
 // ############ https://bulma.io/documentation/components/message/
@@ -77,20 +81,6 @@ darkToggleBtn?.addEventListener('click', () => {
       });
     });
   });
-// ############ 
-
-
-
-
-
-// ############ klavye kısayolları
-// H: Home, L: Login
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'h') window.location.href = '/';
-  if (e.key === 'l') window.location.href = '/login.html';
-});
-
 
 // ############ https://bulma.io/documentation/components/modal/
 
@@ -137,30 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// ############
 
+// ############
 
-
-
-
-// ############ 
-
-// ############ vite counter
-// https://vitejs.dev/guide/features.html#feature-counter
-export function setupCounter(element) {
-  let counter = 0
-  const setCounter = (count) => {
-    counter = count
-    element.innerHTML = `${counter}`
-  }
-  element.addEventListener('click', () => setCounter(counter + 1))
-  setCounter(0)
-}
-setupCounter(document.querySelector('#counter'))
-
-
-// ############ 
-// Test backend connection
-fetch('/api/health')
-  .then(r => r.json())
-  .then(data => console.log('Backend connected:', data))
-  .catch(err => console.error('Backend error:', err));
+// ############
