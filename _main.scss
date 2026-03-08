@@ -1,0 +1,44 @@
+// ######### Color Variables
+$LightCoral: #f08080;
+$RoyalBlue: #4169e1;
+$AntiqueWhite: #FAEBD7;
+$Thistle: #d8bfd8;
+$OldLace: #FDF5E6;
+$LightSalmon: #FFA07A;
+
+// ######### Bulma Customization
+@use "bulma/sass" with (
+  $family-primary: '"Montserrat", sans-serif',
+  $primary: $LightSalmon,
+  $link: $RoyalBlue,
+  $control-border-width: 0px,
+  $footer-padding: 1rem,
+  $body-background-color: $OldLace,
+  $navbar-background-color: $OldLace,
+  $navbar-height: 4rem, // bulma navbar jump fix
+  $navbar-box-shadow-size: 0
+);
+
+// ######### External CSS Imports
+
+// ######### Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+// ######### Media Responsiveness
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// ######### Focus Handling
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ######### */
+
+/* ######### */
+
+/* ######### */
