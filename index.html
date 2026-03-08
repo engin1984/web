@@ -3,140 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/png" href="/favicon.svg" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="icon" type="image/png" sizes="256x256" href="/favicon.svg" />
-    <meta name="msapplication-TileImage" content="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>e-ng.in</title>
     <link
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <style>
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        background: #0a0e0a;
-        font-family: "JetBrains Mono", monospace;
-        min-height: 100vh;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        padding: 0.5rem;
-      }
-
-      .window {
-        width: 100%;
-        max-width: 660px;
-        background: #0d120d;
-        border: 1px solid #1e3a1e;
-        border-radius: 10px;
-        box-shadow:
-          0 0 60px rgba(0, 200, 80, 0.06),
-          0 20px 60px rgba(0, 0, 0, 0.5);
-        overflow: hidden;
-      }
-
-      /* TITLE BAR */
-      .titlebar {
-        background: #111811;
-        padding: 10px 16px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        border-bottom: 1px solid #1e3a1e;
-      }
-      .dot {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        flex-shrink: 0;
-      }
-      .dot.r {
-        background: #ff5f57;
-      }
-      .dot.y {
-        background: #febc2e;
-      }
-      .dot.g {
-        background: #28c840;
-      }
-      .ttitle {
-        color: #3a6a3a;
-        font-size: 0.7rem;
-        margin-left: auto;
-      }
-
-      /* BODY */
-      .body {
-        padding: 1rem 1rem 1.5rem;
-      }
-
-      /* LINE TYPES */
-      .line {
-        margin-bottom: 0.3rem;
-        font-size: 0.7rem;
-        line-height: 1.9;
-      }
-      .prompt {
-        color: #28c840;
-      }
-      .dim {
-        color: #3a6a3a;
-      }
-      .key {
-        color: #7ec87e;
-        display: inline-block;
-        min-width: 12ch;
-      }
-      .val {
-        color: #c8ffc8;
-      }
-      .link {
-        color: #5de85d;
-        text-decoration: none;
-        border-bottom: 1px solid #2a5a2a;
-        transition: border-color 0.15s;
-      }
-      .link:hover {
-        border-bottom-color: #5de85d;
-      }
-      .section-gap {
-        margin-top: 1.2rem;
-      }
-      .cursor {
-        display: inline-block;
-        width: 8px;
-        height: 1em;
-        background: #28c840;
-        vertical-align: text-bottom;
-        animation: blink 1s step-end infinite;
-      }
-      @keyframes blink {
-        0%,
-        100% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0;
-        }
-      }
-
-      .divider {
-        border-top: 1px solid #1a3a1a;
-        margin: 1rem 0;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="window">
@@ -148,7 +22,7 @@
         <!-- ABOUT -->
         <div class="line">
           <span class="key">#e-ng.in</span
-          ><span class="val" style="color: #ffee00">about</span>
+          ><span class="val" style="color: #d97706">about</span>
         </div>
         <div class="line">
           <span class="key">location</span
@@ -176,7 +50,7 @@
         <!-- UPTIME -->
         <div class="line">
           <span class="key">#e-ng.in</span
-          ><span class="val" style="color: #d9534f">uptime</span>
+          ><span class="val" style="color: #cb2431">uptime</span>
         </div>
         <div class="line">
           <span class="key">days</span><span class="val" id="aliveDays"></span>
@@ -195,7 +69,7 @@
         <!-- WHOAMI -->
         <div class="line">
           <span class="key">#e-ng.in</span
-          ><span class="val" style="color: #f0ad4e">whoami</span>
+          ><span class="val" style="color: #e36209">whoami</span>
         </div>
         <div class="line">
           <span class="val"
@@ -209,46 +83,47 @@
         <!-- LINKS -->
         <div class="line">
           <span class="key">#e-ng.in</span
-          ><span class="val" style="color: #da70d6">links</span>
+          ><span class="val" style="color: #6f42c1">links</span>
         </div>
         <div class="line">
-          <a href="https://mail.e-ng.in" class="link">mail</a
-          ><span class="dim"> ~ </span> <a href="#" class="link">chess</a
-          ><span class="dim"> ~ </span> <a href="#" class="link">books</a
-          ><span class="dim"> ~ </span> <a href="#" class="link">link</a
-          ><span class="dim"> ~ </span> <a href="#" class="link">link</a
-          ><span class="dim"> ~ </span>
+          <a href="https://mail.e-ng.in" class="link">mail</a><span class="dim"> ~ </span>
+          <a href="/blog.html" class="link">blog</a><span class="dim"> ~ </span>
+          <a href="#" class="link">books</a><span class="dim"> ~ </span>
+          <a href="#" class="link">link</a><span class="dim"> ~ </span>
+          <a href="#" class="link">link</a><span class="dim"> ~ </span>
           <a href="#" class="link">link</a>
         </div>
 
         <div class="divider"></div>
 
+        <!-- BLOG -->
+        <div class="line">
+          <span class="key">#e-ng.in</span><span class="val" style="color: #005cc5">blog</span>
+        </div>
+        <div class="line">
+          <div><span class="blogdate">01.03.2026 </span><a href="#" class="link">My first post: Welcome</a></div>
+          <div><span class="blogdate">01.03.2026 </span><a href="#" class="link">Why I teach chess to kids</a></div>
+          <div><span class="blogdate">01.03.2026 </span><a href="#" class="link">Thoughts on Gifted Education</a></div>
+          <div><span class="blogdate">01.03.2026 </span><a href="#" class="link">Web tinkering in 2026</a></div>
+        </div>
+
+        <div class="divider"></div>
+
+
+
+
+
+
+
+
+
+
+
+
         <span class="cursor"></span>
       </div>
     </div>
 
-    <script>
-      const born = new Date("1984-08-29T00:00:00");
-
-      // Obfuscate email dynamically mapped to UI
-      const user = "hello";
-      const domain = "e-ng.in";
-      document.getElementById("titleEmail").textContent = `${user}@${domain}`;
-
-      function updateAlive() {
-        const diff = Math.floor((Date.now() - born.getTime()) / 1000);
-        document.getElementById("aliveDays").textContent = Math.floor(
-          diff / 86400,
-        ).toLocaleString();
-        document.getElementById("aliveHours").textContent = Math.floor(
-          diff / 3600,
-        ).toLocaleString();
-        document.getElementById("aliveSecs").textContent =
-          diff.toLocaleString();
-      }
-
-      updateAlive();
-      setInterval(updateAlive, 1000);
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
