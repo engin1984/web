@@ -10,13 +10,13 @@ $LightSalmon: #FFA07A;
 @use "bulma/sass" with (
   $family-primary: '"Montserrat", sans-serif',
   $primary: $LightSalmon,
-  $link: $RoyalBlue,
-  $control-border-width: 0px,
-  $footer-padding: 1rem,
+  //$control-border-width: 0px,
+  //$footer-padding: 1rem,
   //$body-background-color: $OldLace,
-  //$navbar-background-color: $OldLace,
-  $navbar-height: 4rem, // bulma navbar jump fix
-  $navbar-box-shadow-size: 0
+  //$navbar-background-color: $Thistle,
+  //$navbar-height: 4rem, // bulma navbar jump fix
+  //$navbar-box-shadow-size: 0
+  $link: $RoyalBlue
 );
 
 // ######### External CSS Imports
