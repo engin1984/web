@@ -91,25 +91,13 @@
       .prompt {
         color: #28c840;
       }
-      .cmd-whoami {
-        color: #ffee00;
-      } /* Yellow */
-      .cmd-about {
-        color: #f0ad4e;
-      } /* Orange/Yellow */
-      .cmd-uptime {
-        color: #d9534f;
-      } /* Soft Red */
-      .cmd-links {
-        color: #da70d6;
-      } /* Orchid/Purple */
       .dim {
         color: #3a6a3a;
       }
       .key {
         color: #7ec87e;
         display: inline-block;
-        min-width: 70px;
+        min-width: 12ch;
       }
       .val {
         color: #c8ffc8;
@@ -161,8 +149,8 @@
       <div class="body">
         <!-- WHOAMI -->
         <div class="line">
-          <span class="prompt">#e-ng.in</span
-          ><span class="cmd-whoami"> whoami</span>
+          <span class="key">#e-ng.in</span
+          ><span class="val" style="color: #ffee00">whoami</span>
         </div>
         <div class="line indent val">
           Lifelong Learner · Amateur Chess Player · Tech & Computer Enthusiast
@@ -172,8 +160,8 @@
 
         <!-- ABOUT -->
         <div class="line">
-          <span class="prompt">#e-ng.in</span
-          ><span class="cmd-about"> about</span>
+          <span class="key">#e-ng.in</span
+          ><span class="val" style="color: #f0ad4e">about</span>
         </div>
         <div class="line">
           <span class="key">location</span
@@ -200,8 +188,8 @@
 
         <!-- UPTIME -->
         <div class="line">
-          <span class="prompt">#e-ng.in</span
-          ><span class="cmd-uptime"> uptime</span>
+          <span class="key">#e-ng.in</span
+          ><span class="val" style="color: #d9534f">uptime</span>
         </div>
         <div class="line">
           <span class="key">days</span><span class="val" id="aliveDays"></span>
@@ -219,8 +207,8 @@
 
         <!-- LINKS -->
         <div class="line">
-          <span class="prompt">#e-ng.in</span>
-          <span class="cmd-links">links</span>
+          <span class="key">#e-ng.in</span
+          ><span class="val" style="color: #da70d6">links</span>
         </div>
         <div class="line">
           <a href="https://mail.e-ng.in" class="link">mail</a
