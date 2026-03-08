@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -12,76 +12,149 @@
 <meta name="msapplication-TileImage" content="/logo.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>e-ng.in</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/5a2a5f3f4a.js" crossorigin="anonymous"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0a0e0a;
+    font-family: 'JetBrains Mono', monospace;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .window {
+    width: 100%;
+    max-width: 660px;
+    background: #0d120d;
+    border: 1px solid #1e3a1e;
+    border-radius: 10px;
+    box-shadow: 0 0 60px rgba(0,200,80,0.06), 0 20px 60px rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
+
+  /* TITLE BAR */
+  .titlebar {
+    background: #111811;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #1e3a1e;
+  }
+  .dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+  .dot.r { background: #ff5f57; }
+  .dot.y { background: #febc2e; }
+  .dot.g { background: #28c840; }
+  .ttitle {
+    color: #3a6a3a;
+    font-size: 0.7rem;
+    margin: 0 auto;
+  }
+
+  /* BODY */
+  .body {
+    padding: 2rem 2rem 2.5rem;
+  }
+
+  /* LINE TYPES */
+  .line { margin-bottom: 0.3rem; font-size: 0.9rem; line-height: 1.8; }
+  .prompt { color: #28c840; }
+  .cmd    { color: #e0ffe0; }
+  .dim    { color: #3a6a3a; }
+  .key    { color: #7ec87e; display: inline-block; min-width: 100px; }
+  .val    { color: #c8ffc8; }
+  .link   { color: #5de85d; text-decoration: none; border-bottom: 1px solid #2a5a2a; transition: border-color 0.15s; }
+  .link:hover { border-bottom-color: #5de85d; }
+  .section-gap { margin-top: 1.2rem; }
+  .cursor {
+    display: inline-block;
+    width: 8px; height: 1em;
+    background: #28c840;
+    vertical-align: text-bottom;
+    animation: blink 1s step-end infinite;
+  }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+  .divider {
+    border-top: 1px solid #1a3a1a;
+    margin: 1.5rem 0;
+  }
+</style>
 </head>
 <body>
-<div class="container p-3 has-background-white is-max-widescreen">
-<header class="is-flex is-justify-content-space-between is-align-items-center py-4 mb-4">
 
-<a href="/" class="is-flex is-align-items-center has-text-dark is-size-5 has-text-weight-bold">
-<span class="icon mr-2"><i class="fa-solid fa-house"></i></span>
-<span>e-ng.in</span>
-</a>
-
-<a href="settings.html" class="button is-light is-rounded">
-<span class="icon"><i class="fa-solid fa-cog"></i></span>
-<span>Settings</span>
-</a>
-
-</header>
-
-<div class="notification is-info is-light"><button class="delete"></button>
-<p>dismissable cookie based site notification</p>
+<div class="window">
+<div class="titlebar">
+<span class="dot r"></span>
+<span class="dot y"></span>
+<span class="dot g"></span>
+<span class="ttitle" id="titleEmail"></span>
 </div>
-<!-- mid container-->
-<div class="container">
+<div class="body">
 
-<div class="box has-text-centered has-background-white">
-<p class="title is-4 mt-4">Hi, I'm Engin</p>
-<p class="subtitle is-6 mt-2">Welcome to my personal workspace and portfolio.</p>
-</div>
+<div class="line"><span class="prompt">#e-ng.in</span><span class="cmd"> whoami</span></div>
+<div class="line" style="padding-left:1rem; color:#c8ffc8;">Teacher · Amateur Chess Player · Tech lover · Computer Enthusiast</div>
 
-<div class="columns is-multiline">
+<div class="divider"></div>
 
-<div class="column is-2">
-<a href="https://mail.e-ng.in" class="box has-text-centered is-hoverable"  style="height: 100%;">
-<span class="icon is-large has-text-primary"><i class="fa-solid fa-envelope fa-2x"></i></span>
-<p class="title is-5 mt-2">Mail</p>
-<p class="subtitle is-6 mt-2">mail.e-ng.in</p>
-</a>
-</div>
+<div class="line"><span class="prompt">#e-ng.in</span><span class="cmd"> about</span></div>
+<div class="line" style="padding-left:1rem;"><span class="key">location</span><span class="val">Bursa, Türkiye</span></div>
+<div class="line" style="padding-left:1rem;"><span class="key">work</span><span class="val">Primary School Teacher</span></div>
+<div class="line" style="padding-left:1rem;"><span class="key">passions</span><span class="val">chess · teaching · web surfing</span></div>
+<div class="line" style="padding-left:1rem;"><span class="key">ratings</span><span class="val">~1500 rapid · ~1750 puzzles</span></div>
 
-<div class="column is-2">
-<a href="https://e-ng.in" class="box has-text-centered is-hoverable" style="height: 100%;">
-<span class="icon is-large has-text-info"><i class="fa-brands fa-delicious fa-2x"></i></span>
-<p class="title is-5 mt-2">Chess</p>
-<p class="subtitle is-6 mt-2">My chess links</p>
-</a>
+<div class="divider"></div>
+
+<div class="line"><span class="prompt">#e-ng.in</span><span class="cmd"> uptime</span></div>
+<div class="line" style="padding-left:1rem;"><span class="key">days</span><span class="val" id="aliveDays"></span></div>
+<div class="line" style="padding-left:1rem;"><span class="key">hours</span><span class="val" id="aliveHours"></span></div>
+<div class="line" style="padding-left:1rem;"><span class="key">seconds</span><span class="val" id="aliveSecs"></span></div>
+
+<div class="divider"></div>
+
+<div class="line"><span class="prompt">#e-ng.in</span> <span class="cmd">links</span></div>
+<div class="line" style="padding-left:1rem;">
+<a href="https://mail.e-ng.in" class="link">mail</a><span class="dim"> ~ </span>
+<a href="#" class="link">chess</a><span class="dim"> ~ </span>
+<a href="#" class="link">books</a><span class="dim"> ~ </span>
+<a href="#" class="link">link</a><span class="dim"> ~ </span>
+<a href="#" class="link">link</a><span class="dim"> ~ </span>
+<a href="#" class="link">link</a>
 </div>
 
-<div class="column is-2">
-<a href="https://docs.e-ng.in" class="box has-text-centered is-hoverable" style="height: 100%;">
-<span class="icon is-large has-text-info"><i class="fa-solid fa-link fa-2x"></i></span>
-<p class="title is-5 mt-2">Links</p>
-<p class="subtitle is-6 mt-2">My web links</p>
-</a>
-</div>
+<div class="divider"></div>
 
-<div class="column is-2">
-<a href="https://docs.e-ng.in" class="box has-text-centered is-hoverable" style="height: 100%;">
-<span class="icon is-large has-text-info"><i class="fa-solid fa-book fa-2x"></i></span>
-<p class="title is-5 mt-2">Books</p>
-<p class="subtitle is-6 mt-2">My books</p>
-</a>
-</div>
+<span class="cursor"></span>
 
 </div>
+</div>
 
-<!-- mid end -->
-</div>
-</div>
-<!-- js -->
-<script src="https://kit.fontawesome.com/5a2a5f3f4a.js" crossorigin="anonymous"></script>
-<script type="module" src="_main.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  const born = new Date('1984-08-29T00:00:00');
+
+  // Obfuscate email
+  const user = 'hello';
+  const domain = 'e-ng.in';
+  
+  // Set title bar text
+  document.getElementById('titleEmail').textContent = user + '@' + domain;
+  
+
+
+  function updateAlive() {
+    const diff = Math.floor((Date.now() - born.getTime()) / 1000);
+    document.getElementById('aliveDays').textContent  = Math.floor(diff / 86400).toLocaleString();
+    document.getElementById('aliveHours').textContent = Math.floor(diff / 3600).toLocaleString();
+    document.getElementById('aliveSecs').textContent  = diff.toLocaleString();
+  }
+
+  updateAlive();
+  setInterval(updateAlive, 1000);
+</script>
 </body>
 </html>
