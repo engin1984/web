@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="/logo.png" />
+<link rel="icon" type="image/png" href="/logo.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="/logo.png">
+<link rel="shortcut icon" href="/logo.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/png" sizes="256x256" href="/logo.png">
+<meta name="msapplication-TileImage" content="/logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>e-ng.in</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/5a2a5f3f4a.js" crossorigin="anonymous"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #f4f2ee;
+    --surface: #ffffff;
+    --surface2: #eeece8;
+    --border: #e0ddd7;
+    --text: #1e1c18;
+    --text-muted: #9a9388;
+    --text-subtle: #c0bbb3;
+    --accent: #5c6bc0;
+    --accent-light: #eef0fd;
+    --accent2: #8b6914;
+  }
+
+  html, body {
+    height: 100%;
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  .page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* HEADER */
+  header {
+    padding: 1.5rem 0 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .logo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: -0.02em;
+  }
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  .live-clock {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+  }
+  .settings-btn {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.75rem;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .settings-btn:hover { background: var(--border); color: var(--text); }
+
+  /* MAIN BODY */
+  main {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* GREETING */
+  .greeting { }
+  .greeting-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text);
+  }
+  .greeting-sub {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+    font-weight: 300;
+  }
+
+  /* SECTION LABEL */
+  .section-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--text-subtle);
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+  }
+
+  /* WIDGETS ROW */
+  .widgets {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.75rem;
+  }
+  .widget {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.1rem 1.2rem;
+    transition: box-shadow 0.2s, transform 0.2s;
+    cursor: default;
+  }
+  .widget:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    transform: translateY(-1px);
+  }
+  .w-icon { font-size: 1.2rem; margin-bottom: 0.65rem; }
+  .w-label {
+    font-size: 0.63rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-subtle);
+    margin-bottom: 0.2rem;
+    font-weight: 500;
+  }
+  .w-value { font-size: 0.95rem; font-weight: 500; color: var(--text); }
+  .w-sub { font-size: 0.68rem; color: var(--text-subtle); margin-top: 0.2rem; }
+
+  /* LINKS GRID */
+  .links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.75rem;
+  }
+  .link-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.1rem 1.2rem;
+    text-decoration: none;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+    cursor: pointer;
+  }
+  .link-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    transform: translateY(-1px);
+    border-color: var(--accent);
+  }
+  .lc-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--accent-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+  .lc-text { }
+  .lc-label { font-size: 0.85rem; font-weight: 500; }
+  .lc-url { font-size: 0.65rem; color: var(--text-muted); margin-top: 0.15rem; font-family: 'JetBrains Mono', monospace; }
+
+  /* NOTIFICATION BANNER */
+  .notification {
+    background: var(--accent-light);
+    border: 1px solid #c5caed;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+    color: var(--accent);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  .notif-close {
+    background: none;
+    border: none;
+    color: var(--accent);
+    cursor: pointer;
+    font-size: 1rem;
+    opacity: 0.5;
+    flex-shrink: 0;
+    line-height: 1;
+    padding: 0;
+  }
+  .notif-close:hover { opacity: 1; }
+
+  /* FOOTER */
+  footer {
+    padding: 1rem 0;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.68rem;
+    color: var(--text-subtle);
+    font-family: 'JetBrains Mono', monospace;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="logo">e-ng.in</div>
+    <div class="header-right">
+      <span class="live-clock" id="clock">--:--:--</span>
+      <button class="settings-btn"><i class="fa-solid fa-gear"></i> Settings</button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- GREETING -->
+    <div class="greeting">
+      <div class="greeting-title" id="greetingText">👋 Engin </div>
+    </div>
+
+    <!-- NOTIFICATION -->
+    <div class="notification" id="notifBanner">
+      <span><i class="fa-solid fa-thumbtack"></i> Your daily chess puzzle is waiting — <strong>lichess.org/training</strong></span>
+      <button class="notif-close" onclick="this.parentElement.style.display='none'"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <!-- WIDGETS -->
+    <div>
+      <div class="section-label">At a glance</div>
+      <div class="widgets">
+
+        <div class="widget">
+          <div class="w-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+          <div class="w-label">Weather</div>
+          <div class="w-value">14 °C</div>
+          <div class="w-sub">Partly cloudy</div>
+        </div>
+
+        <div class="widget">
+          <div class="w-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+          <div class="w-label">Alive Since</div>
+          <div class="w-value" id="aliveDays">—</div>
+          <div class="w-sub">days</div>
+          <div class="w-value" id="aliveHours" style="margin-top:0.4rem">—</div>
+          <div class="w-sub">hours</div>
+          <div class="w-value" id="aliveSecs">—</div>
+          <div class="w-sub">seconds</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div>
+      <div class="section-label">Quick links</div>
+      <div class="links-grid">
+        <a class="link-card" href="https://mail.e-ng.in">
+          <div class="lc-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="lc-text">
+            <div class="lc-label">Mail</div>
+            <div class="lc-url">mail.e-ng.in</div>
+          </div>
+        </a>
+        <a class="link-card" href="#">
+          <div class="lc-icon"><i class="fa-solid fa-chess"></i></div>
+          <div class="lc-text">
+            <div class="lc-label">Chess</div>
+            <div class="lc-url">My chess links</div>
+          </div>
+        </a>
+        <a class="link-card" href="https://docs.e-ng.in">
+          <div class="lc-icon"><i class="fa-solid fa-book"></i></div>
+          <div class="lc-text">
+            <div class="lc-label">Books</div>
+            <div class="lc-url">My books</div>
+          </div>
+        </a>
+        <a class="link-card" href="https://docs.e-ng.in">
+          <div class="lc-icon"><i class="fa-solid fa-link"></i></div>
+          <div class="lc-text">
+            <div class="lc-label">Links</div>
+            <div class="lc-url">docs.e-ng.in</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <span>Engin · Bursa, Türkiye</span>
+    <span>e-ng.in</span>
+  </footer>
+
+</div>
+
+<script>
+  // Clock
+  function tick() {
+    const now = new Date();
+    const opts = { timeZone: 'Europe/Istanbul', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+    const t = now.toLocaleTimeString('tr-TR', opts);
+    document.getElementById('clock').textContent = t;
+    document.getElementById('widgetTime').textContent = t.slice(0, 5);
+
+    // Greeting
+    const h = parseInt(t.slice(0, 2));
+    let g = h < 12 ? 'Good morning' : h < 17 ? 'Good afternoon' : 'Good evening';
+    document.getElementById('greetingText').textContent = g + ', Engin 👋';
+
+    // Date subtitle
+    const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const d = new Date(now.toLocaleString('en-US', { timeZone: 'Europe/Istanbul' }));
+    document.getElementById('greetingSub').textContent = `${days[d.getDay()]} · ${d.getDate()} ${months[d.getMonth()]} · Bursa, Türkiye`;
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  // Days alive — live ticker
+  const born = new Date('1984-08-29T00:00:00');
+  function updateAlive() {
+    const diff = Date.now() - born.getTime();
+    const totalSec = Math.floor(diff / 1000);
+    const days  = Math.floor(totalSec / 86400);
+    const hours = Math.floor(totalSec / 3600);
+    const secs  = totalSec;
+    document.getElementById('aliveDays').textContent  = days.toLocaleString();
+    document.getElementById('aliveHours').textContent = hours.toLocaleString();
+    document.getElementById('aliveSecs').textContent  = secs.toLocaleString();
+  }
+  updateAlive();
+  setInterval(updateAlive, 1000);
+  try {
+    const h = new Intl.DateTimeFormat('en-u-ca-islamic', {
+      day: 'numeric', month: 'short', year: 'numeric'
+    }).format(new Date());
+    document.getElementById('hijriDate').textContent = h;
+  } catch(e) {
+    document.getElementById('hijriDate').textContent = 'Ramadan 1446';
+  }
+</script>
+</body>
+</html>
