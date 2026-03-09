@@ -169,3 +169,107 @@ body {
   background: #d73a49;
   color: #ffffff;
 }
+
+/* THEME TOGGLE */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0 4px;
+  margin-left: 8px;
+  line-height: 1;
+  color: #6a737d;
+  transition: opacity 0.2s;
+}
+.theme-toggle:hover {
+  opacity: 0.8;
+}
+
+/* COLORS */
+.color-about { color: #d97706; }
+.color-uptime { color: #cb2431; }
+.color-whoami { color: #e36209; }
+.color-links { color: #6f42c1; }
+.color-blog { color: #005cc5; }
+
+/* DARK MODE */
+html[data-theme="dark"] body {
+  background: #0d1117;
+}
+
+html[data-theme="dark"] .window {
+  background: #161b22;
+  border-color: #30363d;
+}
+
+html[data-theme="dark"] .titlebar {
+  background: #21262d;
+  border-color: #30363d;
+}
+
+html[data-theme="dark"] .ttitle {
+  color: #8b949e;
+}
+
+html[data-theme="dark"] .val, 
+html[data-theme="dark"] .modal-title {
+  color: #c9d1d9;
+}
+
+html[data-theme="dark"] .key, 
+html[data-theme="dark"] .dim, 
+html[data-theme="dark"] .blogdate {
+  color: #8b949e;
+}
+
+html[data-theme="dark"] .link {
+  color: #58a6ff;
+  border-bottom-color: #30363d;
+}
+
+html[data-theme="dark"] .link:hover {
+  border-bottom-color: #58a6ff;
+}
+
+html[data-theme="dark"] .cursor {
+  background: #c9d1d9;
+}
+
+html[data-theme="dark"] .divider {
+  border-top-color: #30363d;
+}
+
+html[data-theme="dark"] .modal-card {
+  background: #161b22;
+  border-color: #30363d;
+}
+
+html[data-theme="dark"] .modal-header {
+  border-bottom-color: #30363d;
+}
+
+html[data-theme="dark"] .modal {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+html[data-theme="dark"] .modal-close-btn {
+  border-color: #f85149;
+  color: #f85149;
+}
+
+html[data-theme="dark"] .modal-close-btn:hover {
+  background: #da3633;
+  color: #ffffff;
+  border-color: #da3633;
+}
+
+html[data-theme="dark"] .theme-toggle {
+  color: #8b949e;
+}
+
+html[data-theme="dark"] .color-about { color: #d29922; }
+html[data-theme="dark"] .color-uptime { color: #f85149; }
+html[data-theme="dark"] .color-whoami { color: #db6d28; }
+html[data-theme="dark"] .color-links { color: #bc8cff; }
+html[data-theme="dark"] .color-blog { color: #58a6ff; }
