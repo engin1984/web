@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const themeToggleBtn = document.getElementById("themeToggle");
 const currentTheme = localStorage.getItem("theme");
 
-if (currentTheme === "dark") {
+if (currentTheme === "dark" || currentTheme === null) {
   document.documentElement.setAttribute("data-theme", "dark");
   if (themeToggleBtn) themeToggleBtn.textContent = "☀️";
 } else {
