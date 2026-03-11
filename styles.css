@@ -170,20 +170,52 @@ body {
   color: #ffffff;
 }
 
-/* THEME TOGGLE */
-.theme-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  padding: 0 4px;
+/* THEME TOGGLE (Classic Switch) */
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
   margin-left: 8px;
-  line-height: 1;
-  color: #6a737d;
-  transition: opacity 0.2s;
 }
-.theme-toggle:hover {
-  opacity: 0.8;
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.theme-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e1e4e8;
+  transition: .2s;
+  border-radius: 20px;
+  border: 1px solid #d1d5da;
+}
+.theme-switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .2s;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+.theme-switch input:checked + .slider {
+  background-color: #2ea043; /* Green when checked (dark mode on) */
+  border-color: #2ea043;
+}
+.theme-switch input:focus + .slider {
+  box-shadow: 0 0 1px #2ea043;
+}
+.theme-switch input:checked + .slider:before {
+  transform: translateX(16px);
 }
 
 /* COLORS */
@@ -264,9 +296,15 @@ html[data-theme="dark"] .modal-close-btn:hover {
   border-color: #da3633;
 }
 
-html[data-theme="dark"] .theme-toggle {
-  color: #8b949e;
+html[data-theme="dark"] .theme-switch .slider {
+  background-color: #30363d;
+  border-color: #8b949e;
 }
+html[data-theme="dark"] .theme-switch input:checked + .slider {
+  background-color: #2ea043;
+  border-color: #2ea043;
+}
+
 
 html[data-theme="dark"] .color-about { color: #d29922; }
 html[data-theme="dark"] .color-uptime { color: #f85149; }
