@@ -1,3 +1,22 @@
+// ########## 
+import "./_main.scss";
+
+
+// ############ klavye kısayolları
+// H: Home, L: Login
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'h') window.location.href = '/';
+  if (e.key === 'l') window.location.href = '/login.html';
+});
+
+
+
+
+
+
+
+
 // --- UPTIME CLOCK LOGIC ---
 const born = new Date("1984-08-29T00:00:00");
 
