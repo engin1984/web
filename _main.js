@@ -1,23 +1,14 @@
-// ########## 
+// ########## BULMA
 import "./_main.scss";
-
 
 // ############ klavye kısayolları
 // H: Home, L: Login
-
 document.addEventListener('keydown', (e) => {
   if (e.key === 'h') window.location.href = '/';
   if (e.key === 'l') window.location.href = '/login.html';
 });
 
-
-
-
-
-
-
-
-// --- UPTIME CLOCK LOGIC ---
+// ############ UPTIME CLOCK LOGIC
 const born = new Date("1984-08-29T00:00:00");
 
 function updateAlive() {
@@ -40,7 +31,7 @@ if (document.getElementById("aliveDays")) {
   setInterval(updateAlive, 1000);
 }
 
-// --- DYNAMIC EMAIL LOGIC ---
+// ############ DYNAMIC EMAIL LOGIC
 // Obfuscate email dynamically mapped to UI
 const titleEmailEl = document.getElementById("titleEmail");
 if (titleEmailEl) {
@@ -54,7 +45,7 @@ if (titleEmailEl) {
   }
 }
 
-// --- MODAL LOGIC ---
+// ############ MODAL LOGIC
 document.addEventListener('DOMContentLoaded', () => {
   function openModal($el) {
     $el.classList.add('is-active');
@@ -108,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// --- THEME LOGIC ---
+// ############ THEME LOGIC
 const themeToggleInput = document.getElementById("themeToggle");
 const currentTheme = localStorage.getItem("theme");
 
