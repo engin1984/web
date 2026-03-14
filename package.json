@@ -1,5 +1,5 @@
 {
-  "name": "e-ng.in-web",
+  "name": "web",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -12,10 +12,7 @@
     "vite": "^6.0.0"
   },
   "dependencies": {
-    "@lichess-org/chessground": "^10.1.0",
-    "@picocss/pico": "^2.1.1",
     "bulma": "^1.0.4",
-    "chessli.js": "^1.1.0",
     "sass": "^1.98.0"
   }
 }
