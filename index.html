@@ -1,130 +1,80 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.svg" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>e-ng.in</title>
-    <script>
-      const theme = localStorage.getItem("theme");
-      if (theme === "dark" || theme === null) {
-        document.documentElement.setAttribute("data-theme", "dark");
-      }
-    </script>
-  </head>
-  <body>
-    <div class="window">
-      <div class="titlebar">
-        <span class="dot r"></span><span class="dot y"></span
-        ><span class="dot g"></span>
-        <span class="ttitle" id="titleEmail"></span>
-        <label class="theme-switch" aria-label="Toggle dark mode">
-          <input type="checkbox" id="themeToggle">
-          <span class="slider">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
-          </span>
-        </label>
-      </div>
-      <div class="body">
-        <!-- ABOUT -->
-        <div class="line">
-          <span class="key">#e-ng.in</span
-          ><span class="val color-about">about</span>
-        </div>
-        <div class="line">
-          <span class="key">location</span
-          ><span class="val">Bursa, Türkiye</span>
-        </div>
-        <div class="line">
-          <span class="key">work</span
-          ><span class="val">Primary School Teacher</span>
-        </div>
-        <div class="line">
-          <span class="key">education</span
-          ><span class="val">Istanbul University</span>
-        </div>
-        <div class="line">
-          <span class="key">specialty</span
-          ><span class="val">Gifted & Talented Education (2002-2006)</span>
-        </div>
-        <div class="line">
-          <span class="key">passions</span
-          ><span class="val">teaching · vibe coding · web surfing · chess</span>
-        </div>
+<head>
+<meta charset="UTF-8" />
+<link rel="icon" href="/favicon.svg" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.svg" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>e-ng.in</title>
+<script>
+const theme = localStorage.getItem("theme");
+if (theme === "dark" || theme === null) {
+document.documentElement.setAttribute("data-theme", "dark");
+}
+</script>
+</head>
+<body>
+<div class="window">
+<div class="titlebar">
+<span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="ttitle" id="titleEmail"></span>
+<label class="theme-switch" aria-label="Toggle dark mode">
+<input type="checkbox" id="themeToggle" />
+<span class="slider">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+</span>
+</label>
+</div>
+<div class="body">
+<!-- ABOUT -->
+<div class="line"><span class="key">#e-ng.in</span><span class="val color-about">about</span></div>
+<div class="line"><span class="key">location</span><span class="val">Bursa, Türkiye</span></div>
+<div class="line"><span class="key">work</span><span class="val">Primary School Teacher</span></div>
+<div class="line"><span class="key">education</span><span class="val">Istanbul University</span></div>
+<div class="line"><span class="key">specialty</span><span class="val">Gifted & Talented Education (2002-2006)</span></div>
+<div class="line"><span class="key">passions</span><span class="val">teaching · vibe coding · web surfing · chess</span></div>
+<div class="divider"></div>
+<!-- UPTIME -->
+<div class="line"><span class="key">#e-ng.in</span><span class="val color-uptime">uptime</span></div>
+<div class="line"><span class="key">days</span><span class="val" id="aliveDays"></span></div>
+<div class="line"><span class="key">hours</span><span class="val" id="aliveHours"></span></div>
+<div class="line"><span class="key">seconds</span><span class="val" id="aliveSecs"></span></div>
+<div class="divider"></div>
+<!-- WHOAMI -->
+<div class="line"><span class="key">#e-ng.in</span><span class="val color-whoami">whoami</span></div>
+<div class="line"><span class="val">Lifelong Learner · Amateur Chess Player · Tech & Computer Enthusiast</span></div>
+<div class="divider"></div>
+<!-- LINKS -->
+<div class="line"><span class="key">#e-ng.in</span><span class="val color-links">links</span></div>
+<div class="line">
+<a href="https://mail.e-ng.in" class="link">mail</a><span class="dim"> ~ </span>
+<a href="/blog.html" class="link">blog</a><span class="dim"> ~ </span>
+<a href="#" class="link">books</a><span class="dim"> ~ </span>
+<a href="#" class="link">link</a><span class="dim"> ~ </span>
+<a href="#" class="link">link</a><span class="dim"> ~ </span>
+<a href="#" class="link">link</a>
+</div>
+<div class="divider"></div>
+<!-- BLOG -->
+<div class="line"><span class="key">#e-ng.in</span><span class="val color-blog">blog</span></div>
+<div class="line">
+<div>
+<span class="blogdate">01.03.2026 </span><a href="#" class="link">My first post: Welcome</a>
+</div>
+<div>
+<span class="blogdate">01.03.2026 </span><a href="#" class="link">Why I teach chess to kids</a>
+</div>
+<div>
+<span class="blogdate">01.03.2026 </span><a href="#" class="link">Thoughts on Gifted Education</a>
+</div>
 
-        <div class="divider"></div>
-
-        <!-- UPTIME -->
-        <div class="line">
-          <span class="key">#e-ng.in</span
-          ><span class="val color-uptime">uptime</span>
-        </div>
-        <div class="line">
-          <span class="key">days</span><span class="val" id="aliveDays"></span>
-        </div>
-        <div class="line">
-          <span class="key">hours</span
-          ><span class="val" id="aliveHours"></span>
-        </div>
-        <div class="line">
-          <span class="key">seconds</span
-          ><span class="val" id="aliveSecs"></span>
-        </div>
-
-        <div class="divider"></div>
-
-        <!-- WHOAMI -->
-        <div class="line">
-          <span class="key">#e-ng.in</span
-          ><span class="val color-whoami">whoami</span>
-        </div>
-        <div class="line">
-          <span class="val"
-            >Lifelong Learner · Amateur Chess Player · Tech & Computer
-            Enthusiast</span
-          >
-        </div>
-
-        <div class="divider"></div>
-
-        <!-- LINKS -->
-        <div class="line">
-          <span class="key">#e-ng.in</span
-          ><span class="val color-links">links</span>
-        </div>
-        <div class="line">
-          <a href="https://mail.e-ng.in" class="link">mail</a><span class="dim"> ~ </span>
-          <a href="/blog.html" class="link">blog</a><span class="dim"> ~ </span>
-          <a href="#" class="link">books</a><span class="dim"> ~ </span>
-          <a href="#" class="link">link</a><span class="dim"> ~ </span>
-          <a href="#" class="link">link</a><span class="dim"> ~ </span>
-          <a href="#" class="link">link</a>
-        </div>
-
-        <div class="divider"></div>
-
-        <!-- BLOG -->
-        <div class="line">
-          <span class="key">#e-ng.in</span><span class="val color-blog">blog</span>
-        </div>
-        <div class="line">
-          <div><span class="blogdate">01.03.2026 </span><a href="#" class="link">My first post: Welcome</a></div>
-          <div><span class="blogdate">01.03.2026 </span><a href="#" class="link">Why I teach chess to kids</a></div>
-          <div><span class="blogdate">01.03.2026 </span><a href="#" class="link">Thoughts on Gifted Education</a></div>
-          <div><span class="blogdate">01.03.2026 </span><a href="#" class="link">Web tinkering in 2026</a></div>
-        </div>
-
-        <div class="divider"></div>
-
-
-
-        <span class="cursor"></span>
-      </div>
-    </div>
+</div>
+<div class="divider"></div>
+<span class="cursor"></span>
+</div>
+</div>
 <!-- js -->
 <script src="https://kit.fontawesome.com/5a2a5f3f4a.js" crossorigin="anonymous"></script>
 <script type="module" src="_main.js"></script>
-  </body>
+</body>
 </html>
