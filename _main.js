@@ -1,7 +1,5 @@
 // ########## BULMA
 import "./_main.scss";
-import { Chessground } from "@lichess-org/chessground";
-import { Chess } from "chessli.js";
 
 // ############ klavye kısayolları
 // H: Home, L: Login
@@ -122,83 +120,4 @@ if (themeToggleInput) {
       localStorage.setItem("theme", "light");
     }
   });
-}
-
-// ############ CHESSGROUND INITIALIZATION
-const cgDiv = document.getElementById("chessground-demo");
-const resetBtn = document.getElementById("chess-reset");
-const statusEl = document.getElementById("game-status");
-
-if (cgDiv) {
-  const chess = new Chess();
-
-  const cg = Chessground(cgDiv, {
-    fen: chess.fen(),
-    movable: {
-      free: false,
-      color: "white",
-      dests: toDests(chess)
-    },
-    events: {
-      after: (orig, dest) => {
-        const move = chess.move({ from: orig, to: dest, promotion: 'q' });
-        if (move) {
-          updateBoard();
-          if (!chess.game_over()) {
-            setTimeout(computerMove, 500);
-          }
-        }
-      }
-    }
-  });
-
-  function toDests(chess) {
-    const dests = new Map();
-    chess.SQUARES.forEach(s => {
-      const ms = chess.moves({square: s, verbose: true});
-      if (ms.length) dests.set(s, ms.map(m => m.to));
-    });
-    return dests;
-  }
-
-  function updateBoard() {
-    cg.set({
-      fen: chess.fen(),
-      lastMove: [chess.history({verbose: true}).pop()?.from, chess.history({verbose: true}).pop()?.to],
-      movable: { 
-        color: chess.turn() === 'w' ? 'white' : 'black',
-        dests: toDests(chess) 
-      }
-    });
-
-    if (statusEl) {
-      if (chess.in_checkmate()) statusEl.textContent = `Checkmate! ${chess.turn() === 'w' ? 'Black' : 'White'} wins.`;
-      else if (chess.in_draw()) statusEl.textContent = "Draw!";
-      else statusEl.textContent = `${chess.turn() === 'w' ? "White's" : "Computer's"} turn`;
-    }
-  }
-
-  function computerMove() {
-    if (chess.game_over()) return;
-
-    const moves = chess.moves();
-    const move = moves[Math.floor(Math.random() * moves.length)];
-    chess.move(move);
-    updateBoard();
-  }
-
-  if (resetBtn) {
-    resetBtn.addEventListener("click", () => {
-      chess.reset();
-      cg.set({
-        fen: chess.fen(),
-        lastMove: null,
-        movable: { 
-          color: "white",
-          dests: toDests(chess) 
-        }
-      });
-      if (statusEl) statusEl.textContent = "White's turn";
-    });
-  }
 }
