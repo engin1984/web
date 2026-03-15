@@ -6,6 +6,21 @@ $Thistle: #d8bfd8;
 $OldLace: #FDF5E6;
 $LightSalmon: #FFA07A;
 
+// ######### Dark Mode Color Variables
+$DarkBg: #0d1117;
+$DarkWindowBg: #161b22;
+$DarkBorder: #30363d;
+$DarkTitlebarBg: #21262d;
+$DarkTextPrimary: #c9d1d9;
+$DarkTextSecondary: #8b949e;
+$DarkLink: #58a6ff;
+$DarkLinkVisited: #bc8cff;
+$DarkRed: #f85149;
+$DarkRedHover: #da3633;
+$DarkGreen: #2ea043;
+$DarkYellow: #d29922;
+$DarkOrange: #db6d28;
+
 // ######### Bulma Customization
 @use "bulma/sass" with (
   $family-primary: '"JetBrains Mono", monospace',
@@ -139,6 +154,9 @@ body {
   text-decoration: none;
   border-bottom: 1px solid #d1d5da;
   transition: border-color 0.15s;
+}
+.link:visited {
+  color: #5a29a5;
 }
 .link:hover {
   border-bottom-color: #0366d6;
@@ -308,58 +326,62 @@ html[data-theme="dark"] .chess-board {
 
 /* DARK MODE */
 html[data-theme="dark"] body {
-  background: #0d1117;
+  background: $DarkBg;
 }
 
 html[data-theme="dark"] .window {
-  background: #161b22;
-  border-color: #30363d;
+  background: $DarkWindowBg;
+  border-color: $DarkBorder;
 }
 
 html[data-theme="dark"] .titlebar {
-  background: #21262d;
-  border-color: #30363d;
+  background: $DarkTitlebarBg;
+  border-color: $DarkBorder;
 }
 
 html[data-theme="dark"] .ttitle {
-  color: #8b949e;
+  color: $DarkTextSecondary;
 }
 
 html[data-theme="dark"] .val, 
 html[data-theme="dark"] .modal-title {
-  color: #c9d1d9;
+  color: $DarkTextPrimary;
 }
 
 html[data-theme="dark"] .key, 
 html[data-theme="dark"] .dim, 
 html[data-theme="dark"] .blogdate {
-  color: #8b949e;
+  color: $DarkTextSecondary;
 }
 
 html[data-theme="dark"] .link {
-  color: #58a6ff;
-  border-bottom-color: #30363d;
+  color: $DarkLink;
+  border-bottom-color: $DarkBorder;
+}
+
+html[data-theme="dark"] .link:visited {
+  color: $DarkLinkVisited;
 }
 
 html[data-theme="dark"] .link:hover {
-  border-bottom-color: #58a6ff;
+  border-bottom-color: $DarkLink;
 }
 
 html[data-theme="dark"] .cursor {
-  background: #c9d1d9;
+  background: $DarkTextPrimary;
 }
 
 html[data-theme="dark"] .divider {
-  border-top-color: #30363d;
+  border-top-color: $DarkBorder;
 }
 
 html[data-theme="dark"] .modal-card {
-  background: #161b22;
-  border-color: #30363d;
+  background: $DarkWindowBg;
+  border-color: $DarkBorder;
 }
 
 html[data-theme="dark"] .modal-header {
-  border-bottom-color: #30363d;
+  border-bottom-color: $DarkBorder;
 }
 
 html[data-theme="dark"] .modal {
@@ -367,28 +389,28 @@ html[data-theme="dark"] .modal {
 }
 
 html[data-theme="dark"] .modal-close-btn {
-  border-color: #f85149;
-  color: #f85149;
+  border-color: $DarkRed;
+  color: $DarkRed;
 }
 
 html[data-theme="dark"] .modal-close-btn:hover {
-  background: #da3633;
+  background: $DarkRedHover;
   color: #ffffff;
-  border-color: #da3633;
+  border-color: $DarkRedHover;
 }
 
 html[data-theme="dark"] .theme-switch .slider {
-  background-color: #30363d;
-  border-color: #8b949e;
+  background-color: $DarkBorder;
+  border-color: $DarkTextSecondary;
 }
 html[data-theme="dark"] .theme-switch input:checked + .slider {
-  background-color: #2ea043;
-  border-color: #2ea043;
+  background-color: $DarkGreen;
+  border-color: $DarkGreen;
 }
 
 
-html[data-theme="dark"] .color-about { color: #d29922; }
-html[data-theme="dark"] .color-uptime { color: #f85149; }
-html[data-theme="dark"] .color-whoami { color: #db6d28; }
-html[data-theme="dark"] .color-links { color: #bc8cff; }
-html[data-theme="dark"] .color-blog { color: #58a6ff; }
+html[data-theme="dark"] .color-about { color: $DarkYellow; }
+html[data-theme="dark"] .color-uptime { color: $DarkRed; }
+html[data-theme="dark"] .color-whoami { color: $DarkOrange; }
+html[data-theme="dark"] .color-links { color: $DarkLinkVisited; }
+html[data-theme="dark"] .color-blog { color: $DarkLink; }
